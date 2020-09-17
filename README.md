@@ -27,13 +27,13 @@ generate the index file
 
 This file has information on which read name corresponds to which CELseq barcode, which demultiplexing is based upon.
 
-1. get the readnames from the barcode read ```cut -f1 {BC_read} > {BC_read_readnames}```
+1. get the readnames from the barcode read ```cut -f1 {BC_read} > BC_read_readnames```
 
-1. get the barcodes. This assumes the barcode is in positions 7 to 14 of the barcode read ```cut -f2 {BC_read} | cut -c7-14 > {BC_read_barcodes}```
+1. get the barcodes. This assumes the barcode is in positions 7 to 14 of the barcode read ```cut -f2 {BC_read} | cut -c7-14 > BC_read_barcodes```
 
-1. paste together the readnames and barcodes ```paste {BC_read_readnames} {BC_read_barcodes} > {BC_read_readnames_barcodes}```
+1. paste together the readnames and barcodes ```paste BC_read_readnames BC_read_barcodes > BC_read_readnames_barcodes```
 
-1. remove the {BC_read_readnames} and {BC_read_barcodes} files to save space
+1. remove the BC_read_readnames and BC_read_barcodes files to save space
 
 **This is the index file completed**
 
