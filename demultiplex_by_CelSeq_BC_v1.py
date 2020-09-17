@@ -11,6 +11,7 @@ import subprocess
 #  cut -f2 {output} | cut -c7-14 > {output_barcodes}
 # paste {output_readnames} {output_barcodes} > {output_readnames_barcodes}
 
+#Author: Anika Neuschulz
 
 reads = pysam.AlignmentFile(sys.argv[1], "rb")
 #this has readnames and barcodes
@@ -37,16 +38,7 @@ for line in index:
 index.close()
 
 
-#max_BC = ""
-#maxentry = 0
-#for entry in barcode_dict:
-#    leng = len(barcode_dict[entry])
-#    if leng > maxentry:
-#        maxentry = leng
-#        max_BC = entry
 
-#print(max_BC)
-#print(maxentry)
 
 print("loading whitelist...")
 #load whitelist of Barcodes
@@ -115,14 +107,8 @@ for barcode in final_reads_dict:
 
 
 
-#pdb.set_trace()
 
 
 outfile.close()
 
 
-
-#ofn = sys.argv[1][:-4] + "_cluster_" + str(key) + ".sam"
-#outfile = pysam.AlignmentFile(ofn, "w", template=bamfile)
-
-#pdb.set_trace()
