@@ -11,7 +11,7 @@ Things you need:
 setting up
 --
 
-1. create a working directory to demultiplex in
+1. create a working directory to demultiplex in  
 Check for sufficient space, as demultiplexing is a bit storage intense
 
 1. paste the barcode sequences you used during library prep in a text file, each one on a separate line, place that file in the working directory. This is the **whitelist**  
